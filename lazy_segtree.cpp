@@ -27,7 +27,7 @@ struct LSGT{
     return merge(get(v*2, l, mid, ql, qr), get(v*2+1, mid+1, r, ql, qr));
   }
   int get(int ql, int qr){return get(1, 0, n, ql, qr);}
-  int merge(int x, int y){return min(x, y);}
+  int merge(int x, int y){return min(x, y);} // min or max
   void push(int v, int l, int r, int mid){
     t[v*2]+= lt[v], t[v*2+1]+= lt[v];
     lt[v*2]+= lt[v], lt[v*2+1]+= lt[v];
